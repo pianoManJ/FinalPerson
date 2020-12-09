@@ -3,13 +3,13 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
-
+import java.lang.Comparable;
 /**
  * 
  * @author nabilm.twymanjr.
  *
  */
-public class Person extends Object{
+public class Person extends Object implements Comparable<Person>{
 	
 	private String name;
 	private int age;
@@ -98,6 +98,19 @@ public class Person extends Object{
 	 */
 	public void setAge(int age) {
 		this.age = age;
+	}
+	/**
+	 * Compares two Person objects. Used for sorting algorithms.
+	 */
+	@Override
+	public int compareTo(Person o) {
+		int difference = this.getAge() - o.getAge();
+		if(difference > 0) {
+			return 1;
+		}else if(difference<0) {
+			return -1;
+		}
+		return 0;
 	}
 	
 	
