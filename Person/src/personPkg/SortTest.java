@@ -13,9 +13,6 @@ public class SortTest {
 		sort1.add(new Person("b", 1));
 		sort1.add(new Person("c", 3));
 		sort1.sort(null);
-		System.out.println(sort1.get(0).getName());
-		System.out.println(sort1.get(1).getName());
-		System.out.println(sort1.get(2).getName());
 		
 		ArrayList <Person> sort2 = new ArrayList<Person>();
 		sort2.add(new Person("b", 1));
